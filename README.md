@@ -4,7 +4,7 @@ Code for our paper: *Shamsian, *Kleinfeld, Globerson & Chechik, "Learning Object
 <a href="https://arxiv.org/abs/2003.10469" target="_blank">paper</a> <br>
 <!-- <a href="https://chechiklab.biu.ac.il/~yuvval/COSMO/" target="_blank">project page</a> <br> -->
 
-![](videos/opnet.gif)
+![](gifs/opnet.gif)
 
 ## Installation
 ### Code and Data
