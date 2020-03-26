@@ -1,0 +1,7 @@
+{
+  "boxes_features_dim": 256,
+  "num_attention_heads": 2,
+  "num_attention_layers": 2,
+  "num_lstm_layers": 2,
+  "lstm_hidden_dim": 512
+}

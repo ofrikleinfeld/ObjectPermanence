@@ -1,0 +1,18 @@
+{
+  "batch_size": 16,
+  "inference_batch_size": 400,
+  "num_workers": 12,
+  "num_epochs": 160,
+  "print_step": 100,
+  "learning_rate": 0.001,
+  "lr_scheduler_patience": 2,
+  "lr_scheduler_factor": 0.8,
+  "device": "cuda:0",
+  "checkpoints_path": "./",
+  "train_sample_dir": "data/train_data/od_perception",
+  "train_labels_dir": "data/train_data/labels",
+  "train_containment_file": "data/train_data/containment_and_occlusions/containment_annotations.txt",
+  "dev_sample_dir": "data/val_data/od_perception",
+  "dev_labels_dir": "data/val_data/labels",
+  "dev_containment_file": "data/val_data/containment_and_occlusions/containment_annotations.txt"
+}

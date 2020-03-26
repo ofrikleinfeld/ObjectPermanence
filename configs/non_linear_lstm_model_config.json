@@ -1,0 +1,4 @@
+{
+  "boxes_features_dim": 256,
+  "videos_hidden_dim": 512
+}

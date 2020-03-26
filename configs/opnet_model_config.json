@@ -1,0 +1,5 @@
+{
+  "object_to_track_pred_dim": 15,
+  "object_to_track_hidden_dim": 256,
+  "videos_hidden_dim": 512
+}
