@@ -5,8 +5,8 @@ import numpy as np
 import os, sys
 sys.path.insert(0, os.getcwd())
 
-DATA_MOUNT_POINT = "your_generated_data_dir"
-OUT_DIR = "testing_dir"  # only running to print out the camera matrix
+DATA_MOUNT_POINT = "Path to blender data: <Repo Path>/generate/data"
+OUT_DIR = "<Output Directory>"
 CAM_MOTION = False
 MAX_MOTIONS = 2
 
