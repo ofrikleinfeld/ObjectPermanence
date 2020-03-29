@@ -101,9 +101,10 @@ An example preprocess config file is provided in the `configs` directory
 ## Cite our paper
 If you use this code, please cite our paper.
 ```
-@inproceedings{Shamsian2020LearningOP,
+@article{shamsian2020learning,
   title={Learning Object Permanence from Video},
-  author={Aviv Shamsian and Ofri Kleinfeld and Amir Globerson and Gal Chechik},
+  author={Shamsian, Aviv and Kleinfeld, Ofri and Globerson, Amir and Chechik, Gal},
+  journal={arXiv preprint arXiv:2003.10469},
   year={2020}
 }
 ```
