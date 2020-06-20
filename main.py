@@ -5,6 +5,7 @@ from typing import Dict, Any
 from baselines.analyze_iou_offline import analyze_results
 from baselines.training_main import training_main
 from baselines.inference_main import trackers_inference_main, reasoning_inference_main
+from baselines.cater_setup_inference import cater_setup_inference
 from baselines.preprocess_perception_main import preprocess_main
 from baselines.supported_models import INFERENCE_SUPPORTED_MODELS, TRAINING_SUPPORTED_MODELS
 
@@ -67,6 +68,16 @@ if __name__ == '__main__':
     analysis_parser.add_argument("--output_file", type=str, required=True, metavar="results.csv",
                                  help="Path to save the output csv file with the analyzed results")
 
+    # create parser for the cater setup inference
+    cater_parser = subparsers.add_parser('cater_inference')
+    cater_parser.set_defaults(mode='cater_inference')
+    cater_parser.add_argument("--results_dir", type=str, required=True,
+                                  help="a path to a a dictionary to save classification results")
+    cater_parser.add_argument("--inference_config", type=str, required=True,
+                                  help="a path to config file for the experiment")
+    cater_parser.add_argument("--model_config", type=str, required=False,
+                                  help="a path to config file for the experiment")
+
     args = parser.parse_args()
     mode = args.mode
     if mode == "inference":
@@ -118,3 +129,11 @@ if __name__ == '__main__':
         analyze_results(predictions_dir, labels_dir, output_file, containment_annotations, containment_only_static,
                         containment_with_move_annotations, visibility_rate_gt_0, visibility_rate_gt_30, visibility_gt_99,
                         iou_threshold)
+
+    if mode == "cater_inference":
+        model_type = "opnet"
+        results_dir = args.results_dir
+        inference_config_path = args.inference_config
+        model_config_path = args.model_config
+
+        cater_setup_inference(model_type, results_dir, inference_config_path, model_config_path)

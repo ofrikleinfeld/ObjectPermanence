@@ -98,6 +98,20 @@ For running an object detection and generating visible object annotations run `p
 ```
 An example preprocess config file is provided in the `configs` directory
 
+### Inference according to the CATER setup (snitch localization task)
+For using a trained model to perform inference according to the snitch localization task defined in CATER, 
+run the command `python main.py cater_inferece` with the following arguments:
+```
+--results_dir <path to a directory to save result predictions>
+--model_config <path to a json file containing model configuration>
+--inference_config <path to a json file containing inference configuration>
+```
+The command will output a csv file containing the 6x6 grid class predictions for each video in the provided dataset.  
+The inference config file should have the same structure as the config file used in the "inference" mode.
+This mode only supports the "opnet" model, Thus there is no need to define the model type (unlike in the original "inference" mode)
+and the "model_config" parameter should match the path to the opnet model config file. 
+
+
 ## Cite our paper
 If you use this code, please cite our paper.
 ```
