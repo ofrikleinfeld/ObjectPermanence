@@ -11,14 +11,20 @@ Code for our paper: *Shamsian, *Kleinfeld, Globerson & Chechik, "Learning Object
 
  1. Download or clone the code in this repository
  2. cd to the project directory
- 3. Our dataset and trained models will be available for download in the upcoming days
+ 3. Please visit our [project website](https://chechiklab.biu.ac.il/~avivshamsian/OP/OP_HTML.html#DatasetLinks) to download our datasets and pretrained models
 
-### Anaconda Environment
+### Cconda Environment
 
-Quick installation using Anaconda:
-  
+Quick installation using Conda:
+
 `conda env create -f environment.yml`
-    
+
+### Build using docker
+  1. Use the command `docker build -t op:latest .` to build OP image using docker
+  2. Download the datasets and trained models and unzip them. Save the datasets in a folder named data
+  3. Run the container using the commend `docker run -it --rm -v <absolute_path_to_the_project_directory>/trained_models:/ObjectPermanence/trained_models -v <absolute_path_to_the_project_directory>/data:/ObjectPermanence/data --name op op:latest`
+  4. If you want to utilize available GPU resources within the container use the `nvidia-docker` command instead of the `docker` command when running the container in step 3 
+
 
 ## Directory Structure
 directory | file | description
@@ -47,8 +53,8 @@ run the command `python main.py training` with the following arguments:
 --training_config <path to a json file containing training configuration>
 ```
 
-The currently supported model types are: 
-1. opent 
+The currently supported model types are:
+1. opent
 2. opnet_lstm_mlp
 3. baseline_lstm
 4. non_linear_lstm
@@ -56,9 +62,9 @@ The currently supported model types are:
 
 Model configuration files and an example training configuration file are provided in the `configs` directory.
 For running experiment on the "learning from only visible frames" setup (Section 7.2 in the paper) just use the prefix "no_labels" after the model name. for example ```opnet_no_labels```.
- 
+
 ### Inference
-For using a trained model to perform inference on an unlabeld data, 
+For using a trained model to perform inference on an unlabeld data,
 run the command `python main.py inference` with the following arguments:
 ```
 --model_type <name of the model to use>
@@ -78,12 +84,12 @@ For analyzing results received after invoking the `inference` command, run `pyth
 Various frame level annotation files can also be supplied as arguments when running `python main.py analysis`.
 Following is an example of a bash command to analyze results using detailed frame level annotations
 ```sh
-$ python main.py analysis 
---predictions_dir test_results/opnet/ 
---labels_dir test_data/labels 
+$ python main.py analysis
+--predictions_dir test_results/opnet/
+--labels_dir test_data/labels
 --containment_annotations test_data/containment_and_occlusions/containment_annotations.txt
---containment_only_static_annotations test/data/containment_and_occlusions/containment_only_static_annotations.txt 
---containment_with_movements_annotations test/data/containment_and_occlusions/containment_with_move_annotations.txt 
+--containment_only_static_annotations test/data/containment_and_occlusions/containment_only_static_annotations.txt
+--containment_with_movements_annotations test/data/containment_and_occlusions/containment_with_move_annotations.txt
 --visibility_ratio_gt_0 test_data/containment_and_occlusions/visibility_rate_gt_0.txt
 --output_file results.csv
 ```
@@ -99,7 +105,7 @@ For running an object detection and generating visible object annotations run `p
 An example preprocess config file is provided in the `configs` directory
 
 ### Inference according to the CATER setup (snitch localization task)
-For using a trained model to perform inference according to the snitch localization task defined in CATER, 
+For using a trained model to perform inference according to the snitch localization task defined in CATER,
 run the command `python main.py cater_inferece` with the following arguments:
 ```
 --results_dir <path to a directory to save result predictions>
@@ -109,7 +115,7 @@ run the command `python main.py cater_inferece` with the following arguments:
 The command will output a csv file containing the 6x6 grid class predictions for each video in the provided dataset.  
 The inference config file should have the same structure as the config file used in the "inference" mode.
 This mode only supports the "opnet" model, Thus there is no need to define the model type (unlike in the original "inference" mode)
-and the "model_config" parameter should match the path to the opnet model config file. 
+and the "model_config" parameter should match the path to the opnet model config file.
 
 
 ## Cite our paper
@@ -122,4 +128,3 @@ If you use this code, please cite our paper.
   year={2020}
 }
 ```
-

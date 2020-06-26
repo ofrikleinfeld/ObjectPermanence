@@ -74,7 +74,7 @@ class ModelsFactory(object):
             raise AttributeError("Model name is incorrect")
 
         if model_weights_path is not None:
-            model.load_state_dict(torch.load(model_weights_path))
+            model.load_state_dict(torch.load(model_weights_path, map_location="cuda:0"))
             print(f"Loaded model parameters from {model_weights_path}")
 
         return model
