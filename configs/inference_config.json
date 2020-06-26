@@ -1,8 +1,8 @@
 {
-  "batch_size": 800,
+  "batch_size": 16,
   "num_workers": 12,
   "device": "cuda:0",
-  "model_path": "trained_models/opnet.pth",
+  "model_path": "trained_models/od_perception/opnet.pth",
   "videos_dir": "data/test_data/videos",
   "sample_dir": "data/test_data/od_perception",
   "labels_dir": "data/test_data/labels"
