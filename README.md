@@ -22,7 +22,7 @@ Quick installation using Conda:
 ### Build using docker
   1. Use the command `docker build -t op:latest .` to build OP image using docker
   2. Download the datasets and trained models and unzip them. Save the datasets in a folder named data
-  3. Run the container using the commend 'docker run -it --rm -v <absolute_path_to_the_project_directory>/trained_models:/ObjectPermanence/trained_models -v <absolute_path_to_the_project_directory>/data:/ObjectPermanence/data --name op op:latest'
+  3. Run the container using the commend `docker run -it --rm -v <absolute_path_to_the_project_directory>/trained_models:/ObjectPermanence/trained_models -v <absolute_path_to_the_project_directory>/data:/ObjectPermanence/data --name op op:latest`
   4. If you want to utilize available GPU resources within the container use the `nvidia-docker` command instead of the `docker` command when running the container in step 3 
 
 
