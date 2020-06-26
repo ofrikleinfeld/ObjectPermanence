@@ -1,9 +1,9 @@
 # pull nvidia cuda 10 ubuntu 18 base image
 FROM nvidia/cuda:10.2-cudnn7-runtime-ubuntu18.04
 
-# update apt and install wget miniconda
+# update apt and install wget and cv2 required dlls 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y wget
+RUN apt-get install -y wget libsm6 libxext6 libxrender-dev
 
 # install miniconda
 ENV PATH="/root/miniconda3/bin:${PATH}"
