@@ -20,4 +20,4 @@ WORKDIR $PROJECT_DIR
 # create a conda environment with the required packages and activate it
 RUN conda env update --name base -f environment.yml
 
-ENTRYPOINT /bin/bash
+ENTRYPOINT ["/bin/bash"]
