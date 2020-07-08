@@ -1,7 +1,7 @@
 # Learning Object Permanence from Video
 Code for our paper: *Shamsian, *Kleinfeld, Globerson & Chechik, "Learning Object Permanence from Video" <br>
 
-<a href="https://arxiv.org/abs/2003.10469" target="_blank">paper</a> <br>
+<a href="https://arxiv.org/abs/2003.10469" target="_blank">Link to our paper</a> <br>
 <!-- <a href="https://chechiklab.biu.ac.il/~yuvval/COSMO/" target="_blank">project page</a> <br> -->
 
 ![](gifs/opnet.gif)
@@ -13,7 +13,7 @@ Code for our paper: *Shamsian, *Kleinfeld, Globerson & Chechik, "Learning Object
  2. cd to the project directory
  3. Please visit our [project website](https://chechiklab.biu.ac.il/~avivshamsian/OP/OP_HTML.html#DatasetLinks) to download our datasets and pretrained models
 
-### Cconda Environment
+### Conda Environment
 
 Quick installation using Conda:
 
