@@ -16,7 +16,7 @@ class ModelsFactory(object):
     def get_tracker_model(model_name: str, model_weights: str, compute_device: torch.device) -> AbstractReasoner:
         snitch_index = 140
 
-        if model_name == "detetctor_tracker":
+        if model_name == "detector_tracker":
 
             # initiate DaSiamRPN tracker and load its weights
             da_siam_net: nn.Module = SiamRPNvot()

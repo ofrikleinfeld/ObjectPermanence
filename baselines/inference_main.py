@@ -146,7 +146,7 @@ def trackers_inference_main(model_type: str, results_dir: str, config_path: str)
     samples_dir = config["sample_dir"]
     labels_dir = config["labels_dir"]
     device = torch.device(config["device"]) if "device" in config else ""
-    model_weights = config["model_weights"] if "model_weights" in config else ""
+    model_weights = config["model_path"] if "model_path" in config else ""
 
     # load a tracking model
     reasoner: AbstractReasoner = ModelsFactory.get_tracker_model(model_type, model_weights, device)
