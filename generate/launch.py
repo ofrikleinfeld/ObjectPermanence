@@ -51,7 +51,7 @@ def run_blender(gpu_id):
         gpu_id=gpu_id,
         cam_motion='--random_camera' if CAM_MOTION else '',
         max_motions='--max_motions={}'.format(MAX_MOTIONS),
-        blender_path=" /cortex/packages/blender-2.79b/blender",  # noQA
+        blender_path="<insert here the path to blender executable>"
         output_dir=OUT_DIR,  # noQA
         data_mount_point=DATA_MOUNT_POINT)
         # output_dir='{}/rgirdhar/CATER-release/{}/'.format(DATA_MOUNT_POINT, OUT_DIR),  # noQA
