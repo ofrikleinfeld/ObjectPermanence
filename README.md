@@ -88,9 +88,11 @@ $ python main.py analysis
 --predictions_dir test_results/opnet/
 --labels_dir test_data/labels
 --containment_annotations test_data/containment_and_occlusions/containment_annotations.txt
---containment_only_static_annotations test/data/containment_and_occlusions/containment_only_static_annotations.txt
---containment_with_movements_annotations test/data/containment_and_occlusions/containment_with_move_annotations.txt
+--containment_only_static_annotations test_data/containment_and_occlusions/containment_only_static_annotations.txt
+--containment_with_movements_annotations test_data/containment_and_occlusions/containment_with_move_annotations.txt
 --visibility_ratio_gt_0 test_data/containment_and_occlusions/visibility_rate_gt_0.txt
+--visibility_ratio_gt_30 test_data/containment_and_occlusions/visibility_rate_gt_30.txt
+--iou_thresholds 0.5,0.9
 --output_file results.csv
 ```
 
