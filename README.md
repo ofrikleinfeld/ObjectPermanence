@@ -101,11 +101,15 @@ An example preprocess config file is provided in the `configs` directory
 ## Cite our paper
 If you use this code, please cite our paper.
 ```
-@article{shamsian2020learning,
-  title={Learning Object Permanence from Video},
+@inproceedings{shamsian2020learning,
+  title={Learning object permanence from video},
   author={Shamsian, Aviv and Kleinfeld, Ofri and Globerson, Amir and Chechik, Gal},
-  journal={arXiv preprint arXiv:2003.10469},
-  year={2020}
+  booktitle={European Conference on Computer Vision},
+  pages={35--50},
+  year={2020},
+  organization={Springer}
 }
 ```
+Amir Globerson received funding from the European Research Council (ERC) under the European Unions Horizon 2020 research and innovation program (grant ERC HOLI 819080).
+
 
