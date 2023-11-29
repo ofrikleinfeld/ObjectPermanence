@@ -11,7 +11,7 @@ Code for our paper: *Shamsian, *Kleinfeld, Globerson & Chechik, "Learning Object
 
  1. Download or clone the code in this repository
  2. cd to the project directory
- 3. Please visit our [project website](https://chechiklab.biu.ac.il/~avivshamsian/OP/OP_HTML.html#DatasetLinks) to download our datasets and pretrained models
+ 3. Please visit our [project website](https://avivsham.github.io/op_net/) to download our datasets and pretrained models
 
 ### Conda Environment
 
