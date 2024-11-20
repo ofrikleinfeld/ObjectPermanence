@@ -1,5 +1,5 @@
 # Learning Object Permanence from Video
-Code for our paper: *Shamsian, *Kleinfeld, Globerson & Chechik, "Learning Object Permanence from Video" <br>
+Code for our paper: *Shamsian, *Kleinfeld, Globerson & Chechik, "Learning Object Permanence from Video" [ECCV 2020] <br>
 
 <a href="https://arxiv.org/abs/2003.10469" target="_blank">Link to our paper</a> <br>
 <!-- <a href="https://chechiklab.biu.ac.il/~yuvval/COSMO/" target="_blank">project page</a> <br> -->
